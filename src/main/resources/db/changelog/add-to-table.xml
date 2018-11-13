@@ -1,0 +1,50 @@
+
+<databaseChangeLog    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+<changeSet id="add_works_data" author="yildiz" context="development">
+    <insert tableName="workers">
+        <column name="EmployeeId" type="BIGINT" valueNumeric="10001"/>
+        <column name="FirstName">james </column>
+        <column name="LastName">gosling</column>
+        <column name="Phone">+47 32324324</column>
+        <column name="JoiningDate" valueDate="1995-06-09"/>
+    </insert>
+    <insert tableName="workers">
+        <column name="EmployeeId" type="BIGINT" valueNumeric="10002"/>
+        <column name="FirstName">bjarne </column>
+        <column name="LastName">stroustrup</column>
+        <column name="Phone">+91 9834249399</column>
+        <column name="JoiningDate" valueDate="1985-05-11"/>
+    </insert>
+    <insert tableName="workers">
+        <column name="EmployeeId" type="BIGINT" valueNumeric="10003"/>
+        <column name="FirstName">dennis</column>
+        <column name="LastName">ritchie</column>
+        <column name="Phone">+91 8342342345</column>
+        <column name="JoiningDate" valueDate="1980-07-07"/>
+    </insert>
+     <insert tableName="workers">
+        <column name="EmployeeId" type="BIGINT" valueNumeric="10004"/>
+        <column name="FirstName">herbert</column>
+        <column name="LastName">schildt</column>
+        <column name="Phone">+91 8342342345</column>
+        <column name="JoiningDate" valueDate="1990-07-12"/>
+    </insert>
+    <!-- <rollback>
+        <sql>
+            delete from Employee
+            where EmployeeId in (10001, 10002, 10003)
+        </sql>
+    </rollback>-->
+    </changeSet>
+    
+ <!--   <changeSet id="update-phone" author="cemyildiz">
+    <sql   stripComments="true">
+    update valuablecontributors.workers
+    set valuablecontributors.workers.Phone=phoneNumber
+  </sql>
+</changeSet>-->
+</databaseChangeLog>
